@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wourkout Routines</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-cC/C3fJTBwNSyWSc5lXIkKv9T2Vfzp4JbuKxH2tU1DShrpsjIluPCVITP6KKLJgiPHnN+vffXWhIweqgn2TDnw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./icon.ico">
+</head>
+
+<body>
+    <header>
+        <h1><strong>Wourkout Routines</strong></h1>
+        <h4>NO PAIN NO GAIN</h5>
+    </header>
+
+    <div id="vue">
+        <main>
+            <div v-show="opciones" @click="cambiarfb">
+                <h4>Full Body</h4>
+                <p>The most popular routine</p>
+                <p>Engages multiple muscle groups, promoting overall strength and efficiency</p>
+            </div>
+
+            <div v-show="opciones" @click="cambiarub">
+                <h4>Upper Body</h4>
+                <p>Training focusing on upper body</p>
+            </div>
+
+            <div v-show="opciones" @click="cambiarlb">
+                <h4>Lower Body</h4>
+                <p>Exercises targeting legs and glutes</p>
+            </div>
+
+            <div v-show="opciones" @click="cambiarphw">
+                <h4>Push Workout</h4>
+                <p>Routine emphasizing pushing movements</p>
+            </div>
+
+            <div v-show="opciones" @click="cambiarplw">
+                <h4>Pull Workout</h4>
+                <p>Routine focusing on pulling movements</p>
+            </div>
+
+            <div v-show="opciones" @click="cambiarhiit">
+                <h4>HIIT Cardio</h4>
+                <p>High-intensity cardiovascular exercises</p>
+            </div>
+
+            <div v-show="opciones" @click="cambiarcross">
+                <h4>Crossfit</h4>
+                <p>High-intensity varied training</p>
+            </div>
+
+            <div v-show="opciones" @click="cambiarfunc">
+                <h4>Funcional Training</h4>
+                <p>Exercises mimicking everyday movements</p>
+            </div>
+
+        </main>
+
+        <div class="rutina" v-show="fb" @click="cambiarfb">
+            <h2>FULL BODY WORKOUT</h2>
+            <h4>Squats:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Bench Press:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Deadlifts:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Pull ups:</h4>
+            <p>3 sets - 6-8 reps</p>
+            <h4>Parallel Bar Dips:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Push ups:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Planks:</h4>
+            <p>3 sets - 30-45 seconds</p>
+        </div>
+
+        <div class="rutina" v-show="ub" @click="cambiarub">
+            <h2>UPPER BODY WORKOUT</h2>
+            <h4>Bench Press:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Pull ups:</h4>
+            <p>3 sets - max reps</p>
+            <h4>Overhead Shoulder Press:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Bent Over Rows:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Push ups:</h4>
+            <p>3 sets - max reps</p>
+            <h4>Dumbbell Bicep Curls:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Tricep Dips:</h4>
+            <p>3 sets - 8-10 reps</p>
+        </div>
+
+        <div class="rutina" v-show="lb" @click="cambiarlb">
+            <h2>LOWER BODY WORKOUT</h2>
+            <h4>Squats:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Lunges:</h4>
+            <p>3 sets - 10-12 reps per leg</p>
+            <h4>Deadlift:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Leg Press:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Calf Raises:</h4>
+            <p>3 sets - 12-15 reps</p>
+            <h4>Romanian Deadlifts:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Glute Bridges:</h4>
+            <p>3 sets - 12-15 reps</p>
+        </div>
+
+        <div class="rutina" v-show="phw" @click="cambiarphw">
+            <h2>PUSH WORKOUT</h2>
+            <h4>Barbell Bench Press:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Dumbbell Shoulder Press:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Incline Dumbbell Flyes:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Tricep Dips:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Overhead Tricep Extensions:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Push Ups:</h4>
+            <p>3 sets - max reps</p>
+            <h4>Lateral Raises:</h4>
+            <p>3 sets - 12-15 reps</p>
+        </div>
+
+        <div class="rutina" v-show="plw" @click="cambiarplw">
+            <h2>PULL WORKOUT</h2>
+            <h4>Pull Ups:</h4>
+            <p>3 sets - max reps</p>
+            <h4>Barbell Rows:</h4>
+            <p>3 sets - 8-10 reps</p>
+            <h4>Lat Pulldowns:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Seated Cable Rows:</h4>
+            <p>3 sets - 10-12</p>
+            <h4>Bicep Curls:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Hammer Curls:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Face Pulls:</h4>
+            <p>3 sets - 12-15 reps</p>
+        </div>
+
+        <div class="rutina" v-show="hiit" @click="cambiarhiit">
+            <h2>HIIT CARDIO WORKOUT</h2>
+            <h4>Sprint Intervals:</h4>
+            <p>3/4 sets - 20-30 seconds</p>
+            <h4>Jumping Jacks</h4>
+            <p>3/4 sets - 30-40 seconds</p>
+            <h4>Burpees:</h4>
+            <p>3/4 sets - 30-40 seconds</p>
+            <h4>Mountain Climbers:</h4>
+            <p>3/4 sets - 30-40 seconds</p>
+            <h4>High Knees:</h4>
+            <p>3/4 sets - 30-40 seconds</p>
+            <h4>Jump Rope:</h4>
+            <p>3/4 sets - 30-40 seconds</p>
+        </div>
+
+        <div class="rutina" v-show="cross" @click="cambiarcross">
+            <h2>CROSSFIT WORKOUT</h2>
+            <h4>AMRAP 30'</h4>
+            <h5>(As many rounds as posible in 30')</h6>
+            <p>10 Burpees</p>
+            <p>15 Kettlebell Swings</p>
+            <p>20 Air Squats</p>
+            <p>10 Push Press</p>
+            <p>15 Box Jumps</p>
+            <p>20 Sit-Ups</p>
+            <p>8 Pull Ups</p>
+            <p>10 V-Ups</p>
+        </div>
+
+        <div class="rutina" v-show="func" @click="cambiarfunc">
+            <h2>FUNCIONAL WORKOUT</h2>
+            <h4>Bodyweight Squats</h4>
+            <p>3 sets - 12-15 reps</p>
+            <h4>Push Ups:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Side Plank:</h4>
+            <p>3 sets - 30-45 seconds per side</p>
+            <h4>Dumbbell Deadlifts:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Alternating Lunges:</h4>
+            <p>3 sets - 12-15 reps per leg</p>
+            <h4>Renegade Rows:</h4>
+            <p>3 sets - 10-12 reps</p>
+            <h4>Sit-Ups:</h4>
+            <p>3 sets - 15-20 reps</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/guidodiz/" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/guidodiz" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-github"></i></a>
+        <a href="mailto:guidoangeldiz@gmail.com"><i class="fas fa-envelope"></i></a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.20"></script>
+    <script src="soporte.js"></script>
+</body>
+
+</html>
